@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
 
    if (argc > 2)
    {
-      puts(argv[1]);
       for (int i = 1; i < argc; i++)
       {
          if (strlen(argv[1]) < strlen(argv[i]))
