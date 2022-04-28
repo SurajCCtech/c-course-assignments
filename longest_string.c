@@ -6,13 +6,8 @@ int main(int argc, char *argv[])
 {
    if (argc == 1)
       puts("");
-
-   if (argc == 2)
-   {
-      puts(argv[1]);
-   }
-
-   if (argc > 2)
+      
+   else
    {
       for (int i = 1; i < argc; i++)
       {
