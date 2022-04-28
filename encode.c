@@ -3,7 +3,7 @@
 
 int encode(int red, int green, int blue) {
     int color = 0;
-    color=((red & 0xff) << 16 | (green & 0xff) << 8 | (blue & 0xff));
+    color = ((red & 0xff) << 16 | (green & 0xff) << 8 | (blue & 0xff));
     return color;
 }
 
