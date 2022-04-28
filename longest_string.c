@@ -6,17 +6,18 @@ int main(int argc, char *argv[])
 {
    if (argc == 1)
       puts("");
-      
+    
    else
    {
+      char *MAX = argv[1];
       for (int i = 1; i < argc; i++)
       {
-         if (strlen(argv[1]) < strlen(argv[i]))
+         if (strlen(MAX) < strlen(argv[i]))
          {
-            argv[1] = argv[i];
+            MAX = argv[i];
          }
       }
-      puts(argv[1]);
+      puts(MAX);
    }
    return EXIT_SUCCESS;
 }
