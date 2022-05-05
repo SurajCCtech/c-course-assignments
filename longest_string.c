@@ -4,20 +4,20 @@
 
 int main(int argc, char *argv[])
 {
-   if (argc == 1)
+   if (argc < 2)
       puts("");
-    
+
    else
    {
-      char *MAX = argv[1];
+      char *max = argv[1];
       for (int i = 1; i < argc; i++)
       {
-         if (strlen(MAX) < strlen(argv[i]))
+         if (strlen(max) < strlen(argv[i]))
          {
-            MAX = argv[i];
+            max = argv[i];
          }
       }
-      puts(MAX);
+      puts(max);
    }
    return EXIT_SUCCESS;
 }
