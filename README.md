@@ -1,3 +1,1 @@
-# repo for learning git
-
-I am using this repo to learn git
+# Repo for Longest string assignment
