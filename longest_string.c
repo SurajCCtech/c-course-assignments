@@ -4,13 +4,9 @@
 
 int main(int argc, char *argv[])
 {
-   if (argc < 2)
-      puts("");
+   char *max ="";
 
-   else
-   {
-      char *max = argv[1];
-      for (int i = 1; i < argc; i++)
+   for (int i = 1; i < argc; i++)
       {
          if (strlen(max) < strlen(argv[i]))
          {
@@ -18,6 +14,6 @@ int main(int argc, char *argv[])
          }
       }
       puts(max);
-   }
+
    return EXIT_SUCCESS;
 }
