@@ -34,7 +34,11 @@ float fToKelvin(float f)
 
 int main(int argc, char const *argv[])
 {
-    float convertTemp = 0.0;
+    float Result = 0.0;
+    if (argc < 3)
+    {
+        fprintf(stderr, "%s: error: Not enough arguments.\nUsage: %s INPUT_SCALE OUTPUT_SCALE [TEMPERATURE]...",argv[0],argv[0]);
+    }
 
     if (argc >= 3)
     {
@@ -46,10 +50,10 @@ int main(int argc, char const *argv[])
                 puts("");
             }
             
-            for (size_t tempArg = 3; tempArg < argc; tempArg++)
+            for (int tempV = 3; tempV < argc; tempV++)
             {
-                convertTemp = cToFahrenheit(atof(argv[tempArg]));
-                printf("%.2f\n", convertTemp);            
+                Result = cToFahrenheit(atof(argv[tempV]));
+                printf("%.2f\n", Result);            
             }
         }
 
@@ -61,10 +65,10 @@ int main(int argc, char const *argv[])
                 puts("");
             }
 
-            for (size_t tempArg = 3; tempArg < argc; tempArg++)
+            for (int tempV = 3; tempV < argc; tempV++)
             {
-                convertTemp = fToCelsius(atof(argv[tempArg]));
-                printf("%.2f\n",convertTemp);            
+                Result = fToCelsius(atof(argv[tempV]));
+                printf("%.2f\n",Result);            
             }
         }
 
@@ -76,10 +80,10 @@ int main(int argc, char const *argv[])
                 puts("");
             }
 
-            for (size_t tempArg = 3; tempArg < argc; tempArg++)
+            for (int tempV = 3; tempV < argc; tempV++)
             {
-                convertTemp = cToKelvin(atof(argv[tempArg]));
-                printf("%.2f\n",convertTemp);            
+                Result = cToKelvin(atof(argv[tempV]));
+                printf("%.2f\n",Result);            
             }
         }
 
@@ -91,10 +95,10 @@ int main(int argc, char const *argv[])
                 puts("");
             }
 
-            for (size_t tempArg = 3; tempArg < argc; tempArg++)
+            for (int tempV = 3; tempV < argc; tempV++)
             {
-                convertTemp = kToCelsius(atof(argv[tempArg]));
-                printf("%.2f\n",convertTemp);            
+                Result = kToCelsius(atof(argv[tempV]));
+                printf("%.2f\n",Result);            
             }
         }
 
@@ -106,10 +110,10 @@ int main(int argc, char const *argv[])
                 puts("");
             }
             
-            for (size_t tempArg = 3; tempArg < argc; tempArg++)
+            for (int tempV = 3; tempV < argc; tempV++)
             {
-                convertTemp = kToFahrenheit(atof(argv[tempArg]));
-                printf("%.2f\n", convertTemp);            
+                Result = kToFahrenheit(atof(argv[tempV]));
+                printf("%.2f\n", Result);            
             }
         }
 
@@ -121,17 +125,17 @@ int main(int argc, char const *argv[])
                 puts("");
             }
 
-            for (size_t tempArg = 3; tempArg < argc; tempArg++)
+            for (int tempV = 3; tempV < argc; tempV++)
             {
-                convertTemp = fToKelvin(atof(argv[tempArg]));
-                printf("%.2f\n", convertTemp);            
+                Result = fToKelvin(atof(argv[tempV]));
+                printf("%.2f\n", Result);            
             }
         }
         
-        else
+        /*else
         {
-            fprintf(stderr,"%s: error: Not enough arguments.\n Usage: %s INPUT_SCALE OUTPUT_SCALE [TEMPERATURE]...",argv[0],argv[0]);
-        }
+            fprintf(stderr,"%s: error: Not enough arguments.\nUsage: %s INPUT_SCALE OUTPUT_SCALE [TEMPERATURE]...",argv[0],argv[0]);
+        }*/
     }
     return EXIT_SUCCESS;
 }
